@@ -405,7 +405,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+        url('./images/headerNew.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -537,29 +537,30 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__content {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
+    gap: 0px; /* Adjust the gap between the text and the photo */
 }
 
 @media(max-width: 900px) {
     .about__content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: initial;
     }
 }
 
 .about__photo-container {
+    order: -1; /* Ensure the photo appears first */
     margin-bottom: var(--gutter-normal);
 }
 
 @media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
+        flex: 0 0 55%; /* Adjust the width of the text container */
     }
     
     .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
+        flex: 0 0 35%; /* Adjust the width of the photo container */
+        margin: 0 var(--gutter-medium) 0 0; /* Adjust the margin between the text and the photo */
     }
 }
 
